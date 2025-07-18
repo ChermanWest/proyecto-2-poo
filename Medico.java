@@ -1,3 +1,4 @@
+
 public class Medico extends Persona {
     private Especialidad especialidad;
 
