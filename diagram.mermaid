@@ -1,0 +1,67 @@
+classDiagram
+    class Persona {
+        -rut: String
+        -nombre: String
+        -apellido: String
+        -edad: int
+    }
+
+    class Paciente {
+        -direccion: String
+        -telefono: String
+        -tipoSeguridad: TipoSeguridadSocial
+        -ficha: FichaMedica
+    }
+
+    class Medico {
+        -especialidad: Especialidad
+    }
+
+    class Secretaria {
+        -horaLlegada: String
+        -horaSalida: String
+    }
+
+    class CentroMedico {
+        -nombre: String
+        -rut: String
+        -razonSocial: String
+        -medicos: List
+        -pacientes: List
+        -secretarias: List
+    }
+
+    class FichaMedica {
+        -idPaciente: String
+        -edad: int
+        -direccion: String
+        -contacto: String
+        -notaciones: List
+    }
+
+    class Notacion {
+        -fecha: String
+        -sintomas: String
+        -diagnostico: String
+        -indicaciones: String
+        -procedimiento: Procedimiento
+    }
+
+    class Procedimiento {
+        -nombre: String
+        -costo: double
+    }
+
+    class TipoSeguridadSocial
+    class Especialidad
+
+    Persona <|-- Paciente
+    Persona <|-- Medico
+    Persona <|-- Secretaria
+
+    Paciente --> FichaMedica
+    FichaMedica --> Notacion
+    Notacion --> Procedimiento
+    CentroMedico --> Medico
+    CentroMedico --> Paciente
+    CentroMedico --> Secretaria
