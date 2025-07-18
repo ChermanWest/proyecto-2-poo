@@ -1,26 +1,29 @@
-public class Paciente extends Persona{
-    protected String Dirección;
-    protected int Telefono;
-    protected tipoSeguridad tipoSeguridadSocial;
-    protected FichaMedica;
+public class paciente extends Persona { //german estuvo aqui
+    private String direccion;
+    private String telefono;
+    private TipoSeguro seguridad;
+    private FichaMedica ficha;
 
-    public Paciente(String rut, String Nombre, String Apellido,Int Edad, String Dirección, int Telefono){
-        super(Rut, Nombre, Apellido, Edad);
-        this.Dirección = Dirección;
-        this.Telefono = Telefono;
-        this.tipoSeguridad= tipoSeguridad;
-        this.FichaMedica = FichaMedica;
+    public paciente(String RUT, String nombre, String apellido, int edad,
+                    String direccion, String telefono, TipoSeguro seguridad, FichaMedica ficha) {
+        super(RUT, nombre, apellido, edad);
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.seguridad = seguridad;
+        this.ficha = ficha;
     }
 
+    // Getters y setters
+    public String getDireccion() { return direccion; }
+    public void setDireccion(String direccion) { this.direccion = direccion; }
 
-    //SETTER Y GGETTERS
+    public String getTelefono() { return telefono; }
+    public void setTelefono(String telefono) { this.telefono = telefono; }
 
+    public TipoSeguro getSeguridad() { return seguridad; }
+    public void setSeguridad(TipoSeguro seguridad) { this.seguridad = seguridad; }
 
-    public String getDirección(){Return Dirección;}
-
-    public int getTelefono(){Return Telefono;}
-
-    public tipoSeguridadSocial getTipoSeguridad(){Return tipoSeguridad;}
-    
-    public FichaMedica getFichaMedica(){}
+    public FichaMedica
+    getFicha() { return ficha; }
+    public void setFicha(FichaMedica ficha) { this.ficha = ficha; }
 }
