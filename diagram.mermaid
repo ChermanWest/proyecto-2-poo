@@ -1,4 +1,5 @@
 classDiagram
+    %% Clases base
     class Persona {
         -rut: String
         -nombre: String
@@ -6,22 +7,55 @@ classDiagram
         -edad: int
     }
 
+    %% Clases derivadas de Persona
     class Paciente {
         -direccion: String
         -telefono: String
         -tipoSeguridad: TipoSeguridadSocial
         -ficha: FichaMedica
     }
-
     class Medico {
         -especialidad: Especialidad
     }
-
     class Secretaria {
         -horaLlegada: String
         -horaSalida: String
     }
 
+    %% Clases de gestión médica
+    class FichaMedica {
+        -idPaciente: String
+        -edad: int
+        -direccion: String
+        -contacto: String
+        -notaciones: List
+    }
+    class Notacion {
+        -fecha: String
+        -sintomas: String
+        -diagnostico: String
+        -indicaciones: String
+        -procedimiento: Procedimiento
+    }
+    class Procedimiento {
+        -nombre: String
+        -costo: double
+    }
+
+    %% Clases de apoyo
+    class TipoSeguridadSocial {
+        -fonasa: String
+        -isapre: String
+    }
+    class Especialidad {
+        -CARDIOLOGIA
+        -PEDIATRIA
+        -NEUROLOGIA
+        -DERMATOLOGIA
+        -GINE
+    }
+
+    %% Clase principal
     class CentroMedico {
         -nombre: String
         -rut: String
@@ -31,35 +65,12 @@ classDiagram
         -secretarias: List
     }
 
-    class FichaMedica {
-        -idPaciente: String
-        -edad: int
-        -direccion: String
-        -contacto: String
-        -notaciones: List
-    }
-
-    class Notacion {
-        -fecha: String
-        -sintomas: String
-        -diagnostico: String
-        -indicaciones: String
-        -procedimiento: Procedimiento
-    }
-
-    class Procedimiento {
-        -nombre: String
-        -costo: double
-    }
-
-    class TipoSeguridadSocial{
-    
-    class Especialidad
-
+    %% Relaciones de herencia
     Persona <|-- Paciente
     Persona <|-- Medico
     Persona <|-- Secretaria
 
+    %% Relaciones de composición/asociación
     Paciente --> FichaMedica
     FichaMedica --> Notacion
     Notacion --> Procedimiento
