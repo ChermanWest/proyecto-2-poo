@@ -4,7 +4,7 @@ public class paciente extends Persona {
     private TipoSeguro seguridad;
     private FichaMedica ficha;
 
-    public paciente(String RUT, String nombre, String apellido, int edad,
+    public paciente(String Rut, String Nombre, String Apellido, int Edad,
                     String direccion, String telefono, TipoSeguro seguridad, FichaMedica ficha) {
         super(RUT, nombre, apellido, edad);
         this.direccion = direccion;

@@ -1,21 +1,25 @@
-
+// Make sure Persona is imported or defined in the same package
 public class Medico extends Persona {
-    private Especialidad especialidad;
+    private TipoEspecialidad especialidad;
 
-    public Medico(String rut, String nombre, String apellido, int edad, Especialidad especialidad) {
-        super(rut, nombre, apellido, edad);
+    public Medico(String Nombre, String Rut, TipoEspecialidad especialidad) {
+        super(Nombre, Rut);
         this.especialidad = especialidad;
     }
 
-    public Especialidad getEspecialidad() {
+    public TipoEspecialidad getEspecialidad() {
         return especialidad;
     }
 
-    public void setEspecialidad(Especialidad especialidad) {
+    public int getPrecioConsulta() {
+        return especialidad.getPrecioConsulta();
+    }
+    public void setEspecialidad(TipoEspecialidad especialidad) {
         this.especialidad = especialidad;
     }
-
-    @Override
-    public 
+    public void mostrarInfo() {
+        super.mostrarInfo();
+        System.out.println("Especialidad: " + especialidad);
+        System.out.println("Precio de consulta: $" + getPrecioConsulta());
     }
 }
