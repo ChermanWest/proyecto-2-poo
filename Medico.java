@@ -16,7 +16,6 @@ public class Medico extends Persona {
     }
 
     @Override
-    public String getTipo() {
-        return "Medico";
+    public 
     }
 }

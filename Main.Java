@@ -9,7 +9,7 @@ public class Main {
 }
 
 enum Especialidad {
-    GENERAL, PEDIATRIA, DERMATOLOGIA, TRAUMATOLOGIA, OTROS
+    GENERAL, PEDIATRIA, DERMATOLOGIA, GINE, 
 }
 
 enum TipoSeguridadSocial {

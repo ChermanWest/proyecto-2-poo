@@ -1,4 +1,4 @@
-public class paciente extends Persona { //german estuvo aqui
+public class paciente extends Persona { 
     private String direccion;
     private String telefono;
     private TipoSeguro seguridad;

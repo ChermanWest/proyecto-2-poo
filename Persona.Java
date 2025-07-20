@@ -25,6 +25,12 @@ public abstract class Persona{
     
     public int getEdad() {Return Edad;}
     public void setEdad(String Edad){this.Edad = Edad;}
-     
+        
     public abstract getTipo();
+    public void mostrarInfo() {
+        System.out.println("Rut: " + Rut);
+        System.out.println("Nombre: " + Nombre);
+        System.out.println("Apellido: " + Apellido);
+        System.out.println("Edad: " + Edad);
+    }
 }
