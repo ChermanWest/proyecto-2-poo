@@ -1,12 +1,23 @@
 public class Secretaria extends Persona {
-    private String horaLlegada;
-    private String horaSalida;
 
-    public Secretaria(String Rut, String Nombre, String Apellido, int Edad, 
-                     String horaLlegada, String horaSalida){
-        super(Rut, Nombre, Apellido, Edad);
-        this.horaLlegada = horaLlegada;
-        this.horaSalida = horaSalida;
+    public Secretaria(String rut, String nombre, String apellido, int edad) {
+        super(rut, nombre, apellido, edad);
+    }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    @Override
+    public String getTipo() {
+        return "Secretaria";
     }
 }
