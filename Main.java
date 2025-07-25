@@ -1,5 +1,9 @@
 import java.util.Scanner;
-
+/**
+ * Clase principal que ejecuta el menú de gestión del Centro Médico.
+ * Permite agregar, modificar y listar pacientes, médicos y secretarias,
+ * además de registrar atenciones y cobros.
+ */
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -267,6 +271,14 @@ public class Main {
                 //OPCION PARA GESTIONAR SECRETARIAS
 
                 case 8:
+
+ /**
+     * Menú de gestión de secretarias.
+     * Permite agregar, modificar, eliminar y listar secretarias del centro médico.
+     *
+     * @param sc Scanner para la entrada de datos por consola.
+     * @param centro Instancia del centro médico donde se gestionan las secretarias.
+     */
     int opcionSec = 0;
     do {
         System.out.println("\n=== Gestión de Secretarias ===");

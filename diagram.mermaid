@@ -1,67 +1,82 @@
 classDiagram
+    %% Definición de la clase base Persona
     class Persona {
-        -rut: String
-        -nombre: String
-        -apellido: String
-        -edad: int
-    }
-
-    class Paciente {
-        -direccion: String
-        -telefono: String
-        -tipoSeguridad: TipoSeguridadSocial
-        -ficha: FichaMedica
-    }
-
-    class Medico {
-        -especialidad: Especialidad
-    }
-
-    class Secretaria {
-        -horaLlegada: String
-        -horaSalida: String
+        -String rut
+        -String nombre
+        -String apellido
+        -int edad
+        +getter
+        +setter
     }
 
     class CentroMedico {
-        -nombre: String
-        -rut: String
-        -razonSocial: String
-        -medicos: List
-        -pacientes: List
-        -secretarias: List
+        -String nombre
+        -String RUT
+        -String razonSocial
+        +getter
+        +setter
     }
-
+    class Medico {
+        +Especialidad especialidad
+    }
+    class Paciente {
+        -String direccion
+        -String telefono
+        +TipoSeguridad tipoSeguridad
+        +getter
+        +setter
+    }
+    class Secretaria {
+        -String horaLlegada
+        -String horaSalida
+    }
     class FichaMedica {
-        -idPaciente: String
-        -edad: int
-        -direccion: String
-        -contacto: String
-        -notaciones: List
+        -String idPaciente
+        -int edad
+        -String direccion
+        +getter
+        +setter
     }
-
+    class DatosContacto {
+        -String correo
+        -String email
+        +getter
+        +setter
+    }
     class Notacion {
-        -fecha: String
-        -sintomas: String
-        -diagnostico: String
-        -indicaciones: String
-        -procedimiento: Procedimiento
+        -Date fecha
+        -String sintomas
+        -String diagnostico
     }
-
     class Procedimiento {
-        -nombre: String
-        -costo: double
+        -String descripcion
+        -float valor
     }
 
-    class TipoSeguridadSocial
-    class Especialidad
+    %% Enumerados
+    class Especialidad {
+        <<enumeration>>
+        -Cardiologia
+        -Pediatria
+        -Traumatologia
+        -Neurologia
+    }
+    class TipoSeguridad {
+        <<enumeration>>
+        -FONASA
+        -ISAPRE
+    }
 
-    Persona <|-- Paciente
+    %% Relaciones: herencia, asociación y composición
     Persona <|-- Medico
+    Persona <|-- Paciente
     Persona <|-- Secretaria
 
-    Paciente --> FichaMedica
-    FichaMedica --> Notacion
-    Notacion --> Procedimiento
-    CentroMedico --> Medico
-    CentroMedico --> Paciente
-    CentroMedico --> Secretaria
+    CentroMedico "1" o-- "0..*" Medico       : 
+    CentroMedico "1" o-- "0..*" Paciente     : 
+    CentroMedico "1" o-- "0..*" Secretaria   : 
+
+    Paciente    "1" --> "1" FichaMedica      : 
+    FichaMedica "1" *-- "1" DatosContacto   : 
+    FichaMedica "1" *-- "0..*" Notacion      : 
+    Notacion    "1" *-- "0..1" Procedimiento : g
