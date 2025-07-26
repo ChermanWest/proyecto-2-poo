@@ -89,56 +89,68 @@ public class Main {
                         System.out.println("- " + p.getNombre() + " " + p.getApellido() + " | RUT: " + p.getRut());
                     }
                     break;
-
-                //esta es la opcion para atender un paciente, previamente ingresado
-                case 4:
-                    System.out.println("RUT del paciente a atender:");
-                    String rutAtender = sc.nextLine();
-
-                    Paciente paciente = centro.buscarPacientePorRut(rutAtender);
-
-                    if (paciente == null) {
-                        System.out.println("❌ Paciente no encontrado.");
+                
+                    
+                    case 4:
+                    // Mostrar lista de pacientes numerada
+                    System.out.println("=== Seleccione un paciente para atender ===");
+                    int idx = 1;
+                    for (Paciente p : centro.getPacientes()) {
+                        System.out.println(idx + ". " + p.getNombre() + " " + p.getApellido() + " | RUT: " + p.getRut());
+                        idx++;
+                    }
+                    if (centro.getPacientes().isEmpty()) {
+                        System.out.println("No hay pacientes registrados.");
                         break;
-                    }
+                                    }
+                    System.out.print("Ingrese el número del paciente: ");
+    int seleccion = sc.nextInt();
+    sc.nextLine();
 
-                    // Crear ficha si no tiene
-                    if (paciente.getFicha() == null) {
-                        paciente.setFicha(new FichaMedica());
-                    }
+    if (seleccion < 1 || seleccion > centro.getPacientes().size()) {
+        System.out.println("❌ Selección inválida.");
+        break;
+    }
 
-                    System.out.println("Ingrese síntomas:");
-                    String sintomas = sc.nextLine();
+    Paciente paciente = centro.getPacientes().get(seleccion - 1);
 
-                    System.out.println("Ingrese diagnóstico:");
-                    String diagnostico = sc.nextLine();
+    // Crear ficha si no tiene
+    if (paciente.getFicha() == null) {
+        paciente.setFicha(new FichaMedica());
+    }
 
-                    System.out.println("Ingrese indicaciones:");
-                    String indicaciones = sc.nextLine();
+    System.out.println("Ingrese síntomas:");
+    String sintomas = sc.nextLine();
 
-                    System.out.println("¿Se realizó procedimiento? (1 = Sí, 2 = No):");
-                    int hayProc = sc.nextInt();
-                    sc.nextLine();
+    System.out.println("Ingrese diagnóstico:");
+    String diagnostico = sc.nextLine();
 
-                    Procedimiento proc = null;
+    System.out.println("Ingrese indicaciones:");
+    String indicaciones = sc.nextLine();
 
-                    if (hayProc == 1) {
-                        System.out.println("Nombre del procedimiento:");
-                        String nombreProc = sc.nextLine();
+    System.out.println("¿Se realizó procedimiento? (1 = Sí, 2 = No):");
+    int hayProc = sc.nextInt();
+    sc.nextLine();
 
-                        System.out.println("Costo del procedimiento:");
-                        double costoProc = sc.nextDouble();
-                        sc.nextLine();
+    Procedimiento proc = null;
 
-                        proc = new Procedimiento(nombreProc, costoProc);
-                    }
+    if (hayProc == 1) {
+        System.out.println("Nombre del procedimiento:");
+        String nombreProc = sc.nextLine();
 
-                    Notacion nueva = new Notacion(sintomas, diagnostico, indicaciones, proc);
-                    paciente.getFicha().agregarNotacion(nueva);
+        System.out.println("Costo del procedimiento:");
+        double costoProc = sc.nextDouble();
+        sc.nextLine();
 
-                    System.out.println("✅ Consulta registrada correctamente.");
-                    break;
-                    //esta es la opción para ver la ficha medica del paciente,
+        proc = new Procedimiento(nombreProc, costoProc);
+    }
+
+    Notacion nueva = new Notacion(sintomas, diagnostico, indicaciones, proc);
+    paciente.getFicha().agregarNotacion(nueva);
+
+    System.out.println("✅ Consulta registrada correctamente.");
+    break;
+
                 case 5:
                     System.out.println("RUT del paciente:");
                     String rutHistorial = sc.nextLine();
@@ -148,28 +160,45 @@ public class Main {
                     if (pacienteHist != null && pacienteHist.getFicha() != null) {
                         pacienteHist.getFicha().mostrarHistorial();
                     } else if (pacienteHist != null) {
-                        System.out.println("⚠️ El paciente no tiene ficha médica.");
+                        System.out.println(" El paciente no tiene ficha médica.");
                     } else {
                         System.out.println("❌ Paciente no encontrado.");
                     }
                     break;
 
                     // esta es la opcioón para proceder con el cobro al paciente
-                case 6:
-                    System.out.println("RUT del paciente:");
-                    String rutCobro = sc.nextLine();
+case 6:
+    // Selección de paciente por lista numerada
+    System.out.println("=== Seleccione un paciente para cobrar consulta ===");
+    int idxCobro = 1;
+    for (Paciente p : centro.getPacientes()) {
+        System.out.println(idxCobro + ". " + p.getNombre() + " " + p.getApellido() + " | RUT: " + p.getRut());
+        idxCobro++;
+    }
+    if (centro.getPacientes().isEmpty()) {
+        System.out.println("No hay pacientes registrados.");
+        break;
+    }
+    System.out.print("Ingrese el número del paciente: ");
+    int seleccionCobro = sc.nextInt();
+    sc.nextLine();
 
-                    Paciente pacienteCobro = centro.buscarPacientePorRut(rutCobro);
+    if (seleccionCobro < 1 || seleccionCobro > centro.getPacientes().size()) {
+        System.out.println("❌ Selección inválida.");
+        break;
+    }
 
-                    if (pacienteCobro != null && pacienteCobro.getFicha() != null) {
-                        double total = pacienteCobro.getFicha().calcularTotalProcedimientos();
-                        System.out.println("💰 Total a pagar por procedimientos: $" + total);
-                    } else if (pacienteCobro != null) {
-                        System.out.println("⚠️ El paciente no tiene ficha médica.");
-                    } else {
-                        System.out.println("❌ Paciente no encontrado.");
-                    }
-                    break;
+    Paciente pacienteCobro = centro.getPacientes().get(seleccionCobro - 1);
+
+    if (pacienteCobro != null && pacienteCobro.getFicha() != null) {
+        double total = pacienteCobro.getFicha().calcularTotalProcedimientos();
+        System.out.println(" Total a pagar por procedimientos: $" + total);
+    } else if (pacienteCobro != null) {
+        System.out.println(" El paciente no tiene ficha médica.");
+    } else {
+        System.out.println(" Paciente no encontrado.");
+    }
+    break;
 
                 case 7:
                     int opcionMedico = 0;
@@ -207,7 +236,7 @@ public class Main {
                             Medico nuevoMedico = new Medico(rutM, nombreM, apellidoM, edadM, especialidad);
                             centro.agregarMedico(nuevoMedico);
 
-                            System.out.println("✅ Médico agregado correctamente.");
+                            System.out.println(" Médico agregado correctamente.");
                             break;
 
                         case 2:
@@ -236,9 +265,9 @@ public class Main {
                                     System.out.println("- " + e);
                                 }
                                 medicoMod.setEspecialidad(Especialidad.valueOf(sc.nextLine().toUpperCase()));
-                                System.out.println("✅ Médico modificado.");
+                                System.out.println(" Médico modificado.");
                             } else {
-                                System.out.println("❌ Médico no encontrado.");
+                                System.out.println(" Médico no encontrado.");
                             }
                             break;
 
@@ -250,9 +279,9 @@ public class Main {
                             boolean eliminado = centro.getMedicos().removeIf(m -> m.getRut().equalsIgnoreCase(rutElim));
 
                             if (eliminado) {
-                                System.out.println("✅ Médico eliminado.");
+                                System.out.println(" Médico eliminado.");
                             } else {
-                                System.out.println("❌ Médico no encontrado.");
+                                System.out.println(" Médico no encontrado.");
                             }
                             break;
 
@@ -266,11 +295,11 @@ public class Main {
                             break;
 
                         case 5:
-                            System.out.println("↩️ Volviendo al menú principal...");
+                            System.out.println("↩ Volviendo al menú principal...");
                             break;
 
                         default:
-                            System.out.println("⚠️ Opción inválida.");
+                            System.out.println(" Opción inválida.");
                     }
                 } while (opcionMedico != 5);
                 break;
@@ -312,7 +341,7 @@ public class Main {
 
                 Secretaria nuevaSecretaria = new Secretaria(rutS, nombreS, apellidoS, edadS);
                 centro.agregarSecretaria(nuevaSecretaria);
-                System.out.println("✅ Secretaria agregada correctamente.");
+                System.out.println(" Secretaria agregada correctamente.");
                 break;
 
             case 2:
@@ -336,9 +365,9 @@ public class Main {
                     System.out.println("Nueva edad:");
                     secMod.setEdad(sc.nextInt());
                     sc.nextLine();
-                    System.out.println("✅ Secretaria modificada.");
+                    System.out.println("Secretaria modificada.");
                 } else {
-                    System.out.println("❌ Secretaria no encontrada.");
+                    System.out.println(" Secretaria no encontrada.");
                 }
                 break;
 
@@ -350,9 +379,9 @@ public class Main {
                 boolean eliminada = centro.getSecretarias().removeIf(s -> s.getRut().equalsIgnoreCase(rutElim));
 
                 if (eliminada) {
-                    System.out.println("✅ Secretaria eliminada.");
+                    System.out.println(" Secretaria eliminada.");
                 } else {
-                    System.out.println("❌ Secretaria no encontrada.");
+                    System.out.println(" Secretaria no encontrada.");
                 }
                 break;
 
@@ -365,11 +394,11 @@ public class Main {
                 break;
 
             case 5:
-                System.out.println("↩️ Volviendo al menú principal...");
+                System.out.println("↩ Volviendo al menú principal...");
                 break;
 
             default:
-                System.out.println("⚠️ Opción inválida.");
+                System.out.println(" Opción inválida.");
         }
     } while (opcionSec != 5);
     break;
