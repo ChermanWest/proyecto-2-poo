@@ -56,7 +56,7 @@ public class Main {
 
                     Paciente nuevo = new Paciente(rut, nombre, apellido, edad, direccion, telefono, tipo);
                     centro.agregarPaciente(nuevo);
-                    System.out.println("✅ Paciente agregado.");
+                    System.out.println(" Paciente agregado.");
                     break;
                 //esta es la opcion para modificar pacientes
                 case 2:
@@ -75,9 +75,9 @@ public class Main {
                     boolean modificado = centro.modificarPaciente(rutMod, nuevaDir, nuevoFono, nuevaSeguridad);
 
                     if (modificado) {
-                        System.out.println("✅ Datos modificados correctamente.");
+                        System.out.println(" Datos modificados correctamente.");
                     } else {
-                        System.out.println("❌ Paciente no encontrado.");
+                        System.out.println(" Paciente no encontrado.");
                     }
                     break;
 
@@ -108,7 +108,7 @@ public class Main {
     sc.nextLine();
 
     if (seleccion < 1 || seleccion > centro.getPacientes().size()) {
-        System.out.println("❌ Selección inválida.");
+        System.out.println(" Selección inválida.");
         break;
     }
 
@@ -148,7 +148,7 @@ public class Main {
     Notacion nueva = new Notacion(sintomas, diagnostico, indicaciones, proc);
     paciente.getFicha().agregarNotacion(nueva);
 
-    System.out.println("✅ Consulta registrada correctamente.");
+    System.out.println(" Consulta registrada correctamente.");
     break;
 
                 case 5:
@@ -184,7 +184,7 @@ case 6:
     sc.nextLine();
 
     if (seleccionCobro < 1 || seleccionCobro > centro.getPacientes().size()) {
-        System.out.println("❌ Selección inválida.");
+        System.out.println(" Selección inválida.");
         break;
     }
 
@@ -411,7 +411,7 @@ case 6:
                     break;
 
                 default:
-                    System.out.println("❗ Opción inválida.");
+                    System.out.println(" Opción inválida.");
             }
 
         } while (opcion != 0);
