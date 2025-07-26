@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['general_0',['GENERAL',['../enum_especialidad.html#a2613c670accb5188d335516162da12e3',1,'Especialidad']]],
+  ['getapellido_1',['getApellido',['../class_persona.html#a62259c4387a52926aae1dd153d99e970',1,'Persona']]],
+  ['getcosto_2',['getCosto',['../class_procedimiento.html#a0770020b368867a7899f2ac169512388',1,'Procedimiento']]],
+  ['getdiagnostico_3',['getDiagnostico',['../class_notacion.html#a74b228ceaeff9232d1acd348fc1f9f46',1,'Notacion']]],
+  ['getdireccion_4',['getDireccion',['../class_paciente.html#a3156c8d742d49e29c004b29912ce5836',1,'Paciente']]],
+  ['getedad_5',['getEdad',['../class_persona.html#a97d1984e5715ef16d0ffafb02e57bbd1',1,'Persona']]],
+  ['getespecialidad_6',['getEspecialidad',['../class_medico.html#af235f4ec6937c690f846cd306aaaa643',1,'Medico']]],
+  ['getfecha_7',['getFecha',['../class_notacion.html#aa8402bcbdf6e4b613ac10ba579e42be8',1,'Notacion']]],
+  ['getficha_8',['getFicha',['../class_paciente.html#ab72769153de1ddc26beaa15993e597d2',1,'Paciente']]],
+  ['getindicaciones_9',['getIndicaciones',['../class_notacion.html#a32c48e1b680cab75a85e560036498bed',1,'Notacion']]],
+  ['getmedicos_10',['getMedicos',['../class_centro_medico.html#a3a06b33c29988e7f3b0ef21ec34ec2ee',1,'CentroMedico']]],
+  ['getnombre_11',['getNombre',['../class_centro_medico.html#a43c4676bef6b941f75b923cbe4a4868a',1,'CentroMedico.getNombre()'],['../class_persona.html#a9e52662168debc849af57ca92964f66b',1,'Persona.getNombre()'],['../class_procedimiento.html#aa940bd7e524a07dd2ff7eeede119f9a4',1,'Procedimiento.getNombre()']]],
+  ['getnotaciones_12',['getNotaciones',['../class_ficha_medica.html#a5b2e9f9aa62346bf122da9346d2138b5',1,'FichaMedica']]],
+  ['getpacientes_13',['getPacientes',['../class_centro_medico.html#ab860f41a673643ca8858eb63c485f52b',1,'CentroMedico']]],
+  ['getprocedimiento_14',['getProcedimiento',['../class_notacion.html#a85e636a8e31e99c731256a4cc7090816',1,'Notacion']]],
+  ['getrazonsocial_15',['getRazonSocial',['../class_centro_medico.html#a47360c4355dd3eba3c69c63a30041b77',1,'CentroMedico']]],
+  ['getrut_16',['getRut',['../class_centro_medico.html#a38854249087f488c5a9b60f3cec13d8d',1,'CentroMedico.getRut()'],['../class_persona.html#a6be221b3cb72b33d68d3bb0ba1eb25b8',1,'Persona.getRut()']]],
+  ['getsecretarias_17',['getSecretarias',['../class_centro_medico.html#aeb8e267ff6b4823b7cc9434a501eedee',1,'CentroMedico']]],
+  ['getsintomas_18',['getSintomas',['../class_notacion.html#a64f8d1a5b58532c7597d103eec578015',1,'Notacion']]],
+  ['gettelefono_19',['getTelefono',['../class_paciente.html#a39168bf0fcc177f54d810e9b2ecba8bf',1,'Paciente']]],
+  ['gettipo_20',['getTipo',['../class_medico.html#a528e32c183bc2641a1d43edd0bdcbb08',1,'Medico.getTipo()'],['../class_paciente.html#a0a0d17a3bcddbc016c33b334920e6ddc',1,'Paciente.getTipo()'],['../class_persona.html#a9d74ec9091a19c3d1e6f8a9b32b040f3',1,'Persona.getTipo()'],['../class_secretaria.html#a24f8f476f55ac9af3a84fe051455cac9',1,'Secretaria.getTipo()']]],
+  ['gettiposeguridad_21',['getTipoSeguridad',['../class_paciente.html#a76cb756230a9ae77da89220a9c4dcbf9',1,'Paciente']]]
+];

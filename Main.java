@@ -3,7 +3,14 @@ import java.util.Scanner;
  * Clase principal que ejecuta el menú de gestión del Centro Médico.
  * Permite agregar, modificar y listar pacientes, médicos y secretarias,
  * además de registrar atenciones y cobros.
+ * * @version 1.0
+ * @since 2024-07-25
+ * @author  
+ *   German Castro  
+ *   Bastian Aumada
  */
+
+
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

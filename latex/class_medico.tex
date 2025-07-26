@@ -1,0 +1,167 @@
+\doxysection{Medico Class Reference}
+\hypertarget{class_medico}{}\label{class_medico}\index{Medico@{Medico}}
+Inheritance diagram for Medico\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_medico}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_medico_aa2adb892f26e0d6d6d53d729056a56d3}{Medico}} (String rut, String nombre, String apellido, int edad, \mbox{\hyperlink{enum_especialidad}{Especialidad}} especialidad)
+\item 
+\mbox{\hyperlink{enum_especialidad}{Especialidad}} \mbox{\hyperlink{class_medico_af235f4ec6937c690f846cd306aaaa643}{get\+Especialidad}} ()
+\item 
+void \mbox{\hyperlink{class_medico_a73599fc68f60af8efa4067bf39b756e2}{set\+Especialidad}} (\mbox{\hyperlink{enum_especialidad}{Especialidad}} especialidad)
+\item 
+void \mbox{\hyperlink{class_medico_a8af835401263171c5d388a14bf5345bd}{set\+Nombre}} (String nombre)
+\item 
+void \mbox{\hyperlink{class_medico_a813fb08ceb06dd0282fa7e75944c1eee}{set\+Apellido}} (String apellido)
+\item 
+void \mbox{\hyperlink{class_medico_af6355da581efd045f4e43f6fd48cf0ab}{set\+Edad}} (int edad)
+\item 
+String \mbox{\hyperlink{class_medico_a528e32c183bc2641a1d43edd0bdcbb08}{get\+Tipo}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_persona}{Persona}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_persona_a6789ce918813413371e6d940aade6859}{Persona}} (String rut, String nombre, String apellido, int edad)
+\item 
+String \mbox{\hyperlink{class_persona_a9e52662168debc849af57ca92964f66b}{get\+Nombre}} ()
+\item 
+String \mbox{\hyperlink{class_persona_a62259c4387a52926aae1dd153d99e970}{get\+Apellido}} ()
+\item 
+String \mbox{\hyperlink{class_persona_a6be221b3cb72b33d68d3bb0ba1eb25b8}{get\+Rut}} ()
+\item 
+int \mbox{\hyperlink{class_persona_a97d1984e5715ef16d0ffafb02e57bbd1}{get\+Edad}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_persona}{Persona}}}
+\begin{DoxyCompactItemize}
+\item 
+String {\bfseries rut}
+\item 
+String {\bfseries nombre}
+\item 
+String {\bfseries apellido}
+\item 
+int {\bfseries edad}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa un médico con su especialidad. 
+
+\label{doc-constructors}
+\Hypertarget{class_medico_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_medico_aa2adb892f26e0d6d6d53d729056a56d3}\index{Medico@{Medico}!Medico@{Medico}}
+\index{Medico@{Medico}!Medico@{Medico}}
+\doxysubsubsection{\texorpdfstring{Medico()}{Medico()}}
+{\footnotesize\ttfamily \label{class_medico_aa2adb892f26e0d6d6d53d729056a56d3} 
+Medico.\+Medico (\begin{DoxyParamCaption}\item[{String}]{rut}{, }\item[{String}]{nombre}{, }\item[{String}]{apellido}{, }\item[{int}]{edad}{, }\item[{\mbox{\hyperlink{enum_especialidad}{Especialidad}}}]{especialidad}{}\end{DoxyParamCaption})}
+
+Crea un nuevo médico.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rut} & RUT del médico \\
+\hline
+{\em nombre} & Nombre del médico \\
+\hline
+{\em apellido} & Apellido del médico \\
+\hline
+{\em edad} & Edad del médico \\
+\hline
+{\em especialidad} & \doxylink{enum_especialidad}{Especialidad} del médico \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_medico_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_medico_af235f4ec6937c690f846cd306aaaa643}\index{Medico@{Medico}!getEspecialidad@{getEspecialidad}}
+\index{getEspecialidad@{getEspecialidad}!Medico@{Medico}}
+\doxysubsubsection{\texorpdfstring{getEspecialidad()}{getEspecialidad()}}
+{\footnotesize\ttfamily \label{class_medico_af235f4ec6937c690f846cd306aaaa643} 
+\mbox{\hyperlink{enum_especialidad}{Especialidad}} Medico.\+get\+Especialidad (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Obtiene la especialidad del médico.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{enum_especialidad}{Especialidad} del médico 
+\end{DoxyReturn}
+\Hypertarget{class_medico_a528e32c183bc2641a1d43edd0bdcbb08}\index{Medico@{Medico}!getTipo@{getTipo}}
+\index{getTipo@{getTipo}!Medico@{Medico}}
+\doxysubsubsection{\texorpdfstring{getTipo()}{getTipo()}}
+{\footnotesize\ttfamily \label{class_medico_a528e32c183bc2641a1d43edd0bdcbb08} 
+String Medico.\+get\+Tipo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Obtiene el tipo de persona.
+
+\begin{DoxyReturn}{Returns}
+Cadena literal "{}\+Médico"{} 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_persona_a9d74ec9091a19c3d1e6f8a9b32b040f3}{Persona}}.
+
+\Hypertarget{class_medico_a813fb08ceb06dd0282fa7e75944c1eee}\index{Medico@{Medico}!setApellido@{setApellido}}
+\index{setApellido@{setApellido}!Medico@{Medico}}
+\doxysubsubsection{\texorpdfstring{setApellido()}{setApellido()}}
+{\footnotesize\ttfamily \label{class_medico_a813fb08ceb06dd0282fa7e75944c1eee} 
+void Medico.\+set\+Apellido (\begin{DoxyParamCaption}\item[{String}]{apellido}{}\end{DoxyParamCaption})}
+
+Actualiza el apellido del médico.
+
+
+\begin{DoxyParams}{Parameters}
+{\em apellido} & Nuevo apellido \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_medico_af6355da581efd045f4e43f6fd48cf0ab}\index{Medico@{Medico}!setEdad@{setEdad}}
+\index{setEdad@{setEdad}!Medico@{Medico}}
+\doxysubsubsection{\texorpdfstring{setEdad()}{setEdad()}}
+{\footnotesize\ttfamily \label{class_medico_af6355da581efd045f4e43f6fd48cf0ab} 
+void Medico.\+set\+Edad (\begin{DoxyParamCaption}\item[{int}]{edad}{}\end{DoxyParamCaption})}
+
+Actualiza la edad del médico.
+
+
+\begin{DoxyParams}{Parameters}
+{\em edad} & Nueva edad \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_medico_a73599fc68f60af8efa4067bf39b756e2}\index{Medico@{Medico}!setEspecialidad@{setEspecialidad}}
+\index{setEspecialidad@{setEspecialidad}!Medico@{Medico}}
+\doxysubsubsection{\texorpdfstring{setEspecialidad()}{setEspecialidad()}}
+{\footnotesize\ttfamily \label{class_medico_a73599fc68f60af8efa4067bf39b756e2} 
+void Medico.\+set\+Especialidad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enum_especialidad}{Especialidad}}}]{especialidad}{}\end{DoxyParamCaption})}
+
+Define o actualiza la especialidad del médico.
+
+
+\begin{DoxyParams}{Parameters}
+{\em especialidad} & Nueva especialidad \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_medico_a8af835401263171c5d388a14bf5345bd}\index{Medico@{Medico}!setNombre@{setNombre}}
+\index{setNombre@{setNombre}!Medico@{Medico}}
+\doxysubsubsection{\texorpdfstring{setNombre()}{setNombre()}}
+{\footnotesize\ttfamily \label{class_medico_a8af835401263171c5d388a14bf5345bd} 
+void Medico.\+set\+Nombre (\begin{DoxyParamCaption}\item[{String}]{nombre}{}\end{DoxyParamCaption})}
+
+Actualiza el nombre del médico.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nombre} & Nuevo nombre \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Medico.\+java\end{DoxyCompactItemize}

@@ -1,0 +1,122 @@
+\doxysection{Notacion Class Reference}
+\hypertarget{class_notacion}{}\label{class_notacion}\index{Notacion@{Notacion}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_notacion_a4cfc9dfac0bec33d1387dc49c935a8d7}{Notacion}} (String sintomas, String diagnostico, String indicaciones, \mbox{\hyperlink{class_procedimiento}{Procedimiento}} procedimiento)
+\item 
+Local\+Date \mbox{\hyperlink{class_notacion_aa8402bcbdf6e4b613ac10ba579e42be8}{get\+Fecha}} ()
+\item 
+String \mbox{\hyperlink{class_notacion_a64f8d1a5b58532c7597d103eec578015}{get\+Sintomas}} ()
+\item 
+String \mbox{\hyperlink{class_notacion_a74b228ceaeff9232d1acd348fc1f9f46}{get\+Diagnostico}} ()
+\item 
+String \mbox{\hyperlink{class_notacion_a32c48e1b680cab75a85e560036498bed}{get\+Indicaciones}} ()
+\item 
+\mbox{\hyperlink{class_procedimiento}{Procedimiento}} \mbox{\hyperlink{class_notacion_a85e636a8e31e99c731256a4cc7090816}{get\+Procedimiento}} ()
+\item 
+String \mbox{\hyperlink{class_notacion_a115d4e612dd0ea5c36a4ada235a969a9}{to\+String}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa una anotación médica de un paciente, incluyendo fecha, síntomas, diagnóstico, indicaciones y posible procedimiento. 
+
+\label{doc-constructors}
+\Hypertarget{class_notacion_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_notacion_a4cfc9dfac0bec33d1387dc49c935a8d7}\index{Notacion@{Notacion}!Notacion@{Notacion}}
+\index{Notacion@{Notacion}!Notacion@{Notacion}}
+\doxysubsubsection{\texorpdfstring{Notacion()}{Notacion()}}
+{\footnotesize\ttfamily \label{class_notacion_a4cfc9dfac0bec33d1387dc49c935a8d7} 
+Notacion.\+Notacion (\begin{DoxyParamCaption}\item[{String}]{sintomas}{, }\item[{String}]{diagnostico}{, }\item[{String}]{indicaciones}{, }\item[{\mbox{\hyperlink{class_procedimiento}{Procedimiento}}}]{procedimiento}{}\end{DoxyParamCaption})}
+
+Construye una nueva anotación médica.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sintomas} & descripción de los síntomas del paciente \\
+\hline
+{\em diagnostico} & diagnóstico realizado por el médico \\
+\hline
+{\em indicaciones} & indicaciones o recomendaciones médicas \\
+\hline
+{\em procedimiento} & objeto \doxylink{class_procedimiento}{Procedimiento} realizado; null si no hubo procedimiento \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_notacion_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_notacion_a74b228ceaeff9232d1acd348fc1f9f46}\index{Notacion@{Notacion}!getDiagnostico@{getDiagnostico}}
+\index{getDiagnostico@{getDiagnostico}!Notacion@{Notacion}}
+\doxysubsubsection{\texorpdfstring{getDiagnostico()}{getDiagnostico()}}
+{\footnotesize\ttfamily \label{class_notacion_a74b228ceaeff9232d1acd348fc1f9f46} 
+String Notacion.\+get\+Diagnostico (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Obtiene el diagnóstico realizado.
+
+\begin{DoxyReturn}{Returns}
+cadena con el diagnóstico 
+\end{DoxyReturn}
+\Hypertarget{class_notacion_aa8402bcbdf6e4b613ac10ba579e42be8}\index{Notacion@{Notacion}!getFecha@{getFecha}}
+\index{getFecha@{getFecha}!Notacion@{Notacion}}
+\doxysubsubsection{\texorpdfstring{getFecha()}{getFecha()}}
+{\footnotesize\ttfamily \label{class_notacion_aa8402bcbdf6e4b613ac10ba579e42be8} 
+Local\+Date Notacion.\+get\+Fecha (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Obtiene la fecha en que se registró la anotación.
+
+\begin{DoxyReturn}{Returns}
+fecha de la anotación 
+\end{DoxyReturn}
+\Hypertarget{class_notacion_a32c48e1b680cab75a85e560036498bed}\index{Notacion@{Notacion}!getIndicaciones@{getIndicaciones}}
+\index{getIndicaciones@{getIndicaciones}!Notacion@{Notacion}}
+\doxysubsubsection{\texorpdfstring{getIndicaciones()}{getIndicaciones()}}
+{\footnotesize\ttfamily \label{class_notacion_a32c48e1b680cab75a85e560036498bed} 
+String Notacion.\+get\+Indicaciones (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Obtiene las indicaciones médicas dadas.
+
+\begin{DoxyReturn}{Returns}
+cadena con las indicaciones 
+\end{DoxyReturn}
+\Hypertarget{class_notacion_a85e636a8e31e99c731256a4cc7090816}\index{Notacion@{Notacion}!getProcedimiento@{getProcedimiento}}
+\index{getProcedimiento@{getProcedimiento}!Notacion@{Notacion}}
+\doxysubsubsection{\texorpdfstring{getProcedimiento()}{getProcedimiento()}}
+{\footnotesize\ttfamily \label{class_notacion_a85e636a8e31e99c731256a4cc7090816} 
+\mbox{\hyperlink{class_procedimiento}{Procedimiento}} Notacion.\+get\+Procedimiento (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Obtiene el procedimiento realizado, si existe.
+
+\begin{DoxyReturn}{Returns}
+objeto \doxylink{class_procedimiento}{Procedimiento} o null si no hubo ninguno 
+\end{DoxyReturn}
+\Hypertarget{class_notacion_a64f8d1a5b58532c7597d103eec578015}\index{Notacion@{Notacion}!getSintomas@{getSintomas}}
+\index{getSintomas@{getSintomas}!Notacion@{Notacion}}
+\doxysubsubsection{\texorpdfstring{getSintomas()}{getSintomas()}}
+{\footnotesize\ttfamily \label{class_notacion_a64f8d1a5b58532c7597d103eec578015} 
+String Notacion.\+get\+Sintomas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Obtiene la descripción de los síntomas.
+
+\begin{DoxyReturn}{Returns}
+cadena con los síntomas 
+\end{DoxyReturn}
+\Hypertarget{class_notacion_a115d4e612dd0ea5c36a4ada235a969a9}\index{Notacion@{Notacion}!toString@{toString}}
+\index{toString@{toString}!Notacion@{Notacion}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{class_notacion_a115d4e612dd0ea5c36a4ada235a969a9} 
+String Notacion.\+to\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Representa la anotación como texto, incluyendo todos sus campos y el procedimiento.
+
+\begin{DoxyReturn}{Returns}
+String con el detalle completo de la anotación 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Notacion.\+java\end{DoxyCompactItemize}

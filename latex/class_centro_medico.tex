@@ -1,0 +1,183 @@
+\doxysection{Centro\+Medico Class Reference}
+\hypertarget{class_centro_medico}{}\label{class_centro_medico}\index{CentroMedico@{CentroMedico}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_centro_medico_aa53e887504127e5496bfa8a4d7c3ad16}{Centro\+Medico}} (String nombre, String rut, String razon\+Social)
+\item 
+void \mbox{\hyperlink{class_centro_medico_ab3efe832b54bf4651952e0b841788a20}{agregar\+Medico}} (\mbox{\hyperlink{class_medico}{Medico}} medico)
+\item 
+void \mbox{\hyperlink{class_centro_medico_ae1e3c184027e6a58e92362a6f111c65a}{agregar\+Paciente}} (\mbox{\hyperlink{class_paciente}{Paciente}} paciente)
+\item 
+void \mbox{\hyperlink{class_centro_medico_ae30916104dc8fa7665d18a079cb6e897}{agregar\+Secretaria}} (\mbox{\hyperlink{class_secretaria}{Secretaria}} secretaria)
+\item 
+\mbox{\hyperlink{class_paciente}{Paciente}} \mbox{\hyperlink{class_centro_medico_a9377f5de8f6b6a2bb7ea07a2af7038a0}{buscar\+Paciente\+Por\+Rut}} (String rut)
+\item 
+boolean \mbox{\hyperlink{class_centro_medico_a41e1c975ac3ac8567eca35fa79ccd414}{modificar\+Paciente}} (String rut, String nueva\+Direccion, String nuevo\+Telefono, \mbox{\hyperlink{enum_tipo_seguridad_social}{Tipo\+Seguridad\+Social}} nueva\+Seguridad)
+\item 
+String \mbox{\hyperlink{class_centro_medico_a43c4676bef6b941f75b923cbe4a4868a}{get\+Nombre}} ()
+\item 
+String \mbox{\hyperlink{class_centro_medico_a38854249087f488c5a9b60f3cec13d8d}{get\+Rut}} ()
+\item 
+String \mbox{\hyperlink{class_centro_medico_a47360c4355dd3eba3c69c63a30041b77}{get\+Razon\+Social}} ()
+\item 
+Array\+List$<$ \mbox{\hyperlink{class_medico}{Medico}} $>$ \mbox{\hyperlink{class_centro_medico_a3a06b33c29988e7f3b0ef21ec34ec2ee}{get\+Medicos}} ()
+\item 
+Array\+List$<$ \mbox{\hyperlink{class_paciente}{Paciente}} $>$ \mbox{\hyperlink{class_centro_medico_ab860f41a673643ca8858eb63c485f52b}{get\+Pacientes}} ()
+\item 
+Array\+List$<$ \mbox{\hyperlink{class_secretaria}{Secretaria}} $>$ \mbox{\hyperlink{class_centro_medico_aeb8e267ff6b4823b7cc9434a501eedee}{get\+Secretarias}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa un centro médico con médicos, pacientes y secretarias. 
+
+\label{doc-constructors}
+\Hypertarget{class_centro_medico_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_centro_medico_aa53e887504127e5496bfa8a4d7c3ad16}\index{CentroMedico@{CentroMedico}!CentroMedico@{CentroMedico}}
+\index{CentroMedico@{CentroMedico}!CentroMedico@{CentroMedico}}
+\doxysubsubsection{\texorpdfstring{CentroMedico()}{CentroMedico()}}
+{\footnotesize\ttfamily \label{class_centro_medico_aa53e887504127e5496bfa8a4d7c3ad16} 
+Centro\+Medico.\+Centro\+Medico (\begin{DoxyParamCaption}\item[{String}]{nombre}{, }\item[{String}]{rut}{, }\item[{String}]{razon\+Social}{}\end{DoxyParamCaption})}
+
+Crea un nuevo centro médico. 
+\begin{DoxyParams}{Parameters}
+{\em nombre} & Nombre del centro. \\
+\hline
+{\em rut} & Rut del centro. \\
+\hline
+{\em razon\+Social} & Razón social del centro. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_centro_medico_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_centro_medico_ab3efe832b54bf4651952e0b841788a20}\index{CentroMedico@{CentroMedico}!agregarMedico@{agregarMedico}}
+\index{agregarMedico@{agregarMedico}!CentroMedico@{CentroMedico}}
+\doxysubsubsection{\texorpdfstring{agregarMedico()}{agregarMedico()}}
+{\footnotesize\ttfamily \label{class_centro_medico_ab3efe832b54bf4651952e0b841788a20} 
+void Centro\+Medico.\+agregar\+Medico (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_medico}{Medico}}}]{medico}{}\end{DoxyParamCaption})}
+
+Agrega un médico al centro. 
+\begin{DoxyParams}{Parameters}
+{\em medico} & Médico a agregar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_centro_medico_ae1e3c184027e6a58e92362a6f111c65a}\index{CentroMedico@{CentroMedico}!agregarPaciente@{agregarPaciente}}
+\index{agregarPaciente@{agregarPaciente}!CentroMedico@{CentroMedico}}
+\doxysubsubsection{\texorpdfstring{agregarPaciente()}{agregarPaciente()}}
+{\footnotesize\ttfamily \label{class_centro_medico_ae1e3c184027e6a58e92362a6f111c65a} 
+void Centro\+Medico.\+agregar\+Paciente (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_paciente}{Paciente}}}]{paciente}{}\end{DoxyParamCaption})}
+
+Agrega un paciente al centro. 
+\begin{DoxyParams}{Parameters}
+{\em paciente} & \doxylink{class_paciente}{Paciente} a agregar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_centro_medico_ae30916104dc8fa7665d18a079cb6e897}\index{CentroMedico@{CentroMedico}!agregarSecretaria@{agregarSecretaria}}
+\index{agregarSecretaria@{agregarSecretaria}!CentroMedico@{CentroMedico}}
+\doxysubsubsection{\texorpdfstring{agregarSecretaria()}{agregarSecretaria()}}
+{\footnotesize\ttfamily \label{class_centro_medico_ae30916104dc8fa7665d18a079cb6e897} 
+void Centro\+Medico.\+agregar\+Secretaria (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_secretaria}{Secretaria}}}]{secretaria}{}\end{DoxyParamCaption})}
+
+Agrega una secretaria al centro. 
+\begin{DoxyParams}{Parameters}
+{\em secretaria} & \doxylink{class_secretaria}{Secretaria} a agregar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_centro_medico_a9377f5de8f6b6a2bb7ea07a2af7038a0}\index{CentroMedico@{CentroMedico}!buscarPacientePorRut@{buscarPacientePorRut}}
+\index{buscarPacientePorRut@{buscarPacientePorRut}!CentroMedico@{CentroMedico}}
+\doxysubsubsection{\texorpdfstring{buscarPacientePorRut()}{buscarPacientePorRut()}}
+{\footnotesize\ttfamily \label{class_centro_medico_a9377f5de8f6b6a2bb7ea07a2af7038a0} 
+\mbox{\hyperlink{class_paciente}{Paciente}} Centro\+Medico.\+buscar\+Paciente\+Por\+Rut (\begin{DoxyParamCaption}\item[{String}]{rut}{}\end{DoxyParamCaption})}
+
+Busca un paciente por rut. 
+\begin{DoxyParams}{Parameters}
+{\em rut} & Rut del paciente. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_paciente}{Paciente} encontrado o null si no existe. 
+\end{DoxyReturn}
+\Hypertarget{class_centro_medico_a3a06b33c29988e7f3b0ef21ec34ec2ee}\index{CentroMedico@{CentroMedico}!getMedicos@{getMedicos}}
+\index{getMedicos@{getMedicos}!CentroMedico@{CentroMedico}}
+\doxysubsubsection{\texorpdfstring{getMedicos()}{getMedicos()}}
+{\footnotesize\ttfamily \label{class_centro_medico_a3a06b33c29988e7f3b0ef21ec34ec2ee} 
+Array\+List$<$ \mbox{\hyperlink{class_medico}{Medico}} $>$ Centro\+Medico.\+get\+Medicos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Obtiene la lista de médicos. \begin{DoxyReturn}{Returns}
+Lista de médicos. 
+\end{DoxyReturn}
+\Hypertarget{class_centro_medico_a43c4676bef6b941f75b923cbe4a4868a}\index{CentroMedico@{CentroMedico}!getNombre@{getNombre}}
+\index{getNombre@{getNombre}!CentroMedico@{CentroMedico}}
+\doxysubsubsection{\texorpdfstring{getNombre()}{getNombre()}}
+{\footnotesize\ttfamily \label{class_centro_medico_a43c4676bef6b941f75b923cbe4a4868a} 
+String Centro\+Medico.\+get\+Nombre (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Obtiene el nombre del centro. \begin{DoxyReturn}{Returns}
+Nombre del centro. 
+\end{DoxyReturn}
+\Hypertarget{class_centro_medico_ab860f41a673643ca8858eb63c485f52b}\index{CentroMedico@{CentroMedico}!getPacientes@{getPacientes}}
+\index{getPacientes@{getPacientes}!CentroMedico@{CentroMedico}}
+\doxysubsubsection{\texorpdfstring{getPacientes()}{getPacientes()}}
+{\footnotesize\ttfamily \label{class_centro_medico_ab860f41a673643ca8858eb63c485f52b} 
+Array\+List$<$ \mbox{\hyperlink{class_paciente}{Paciente}} $>$ Centro\+Medico.\+get\+Pacientes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Obtiene la lista de pacientes. \begin{DoxyReturn}{Returns}
+Lista de pacientes. 
+\end{DoxyReturn}
+\Hypertarget{class_centro_medico_a47360c4355dd3eba3c69c63a30041b77}\index{CentroMedico@{CentroMedico}!getRazonSocial@{getRazonSocial}}
+\index{getRazonSocial@{getRazonSocial}!CentroMedico@{CentroMedico}}
+\doxysubsubsection{\texorpdfstring{getRazonSocial()}{getRazonSocial()}}
+{\footnotesize\ttfamily \label{class_centro_medico_a47360c4355dd3eba3c69c63a30041b77} 
+String Centro\+Medico.\+get\+Razon\+Social (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Obtiene la razón social del centro. \begin{DoxyReturn}{Returns}
+Razón social del centro. 
+\end{DoxyReturn}
+\Hypertarget{class_centro_medico_a38854249087f488c5a9b60f3cec13d8d}\index{CentroMedico@{CentroMedico}!getRut@{getRut}}
+\index{getRut@{getRut}!CentroMedico@{CentroMedico}}
+\doxysubsubsection{\texorpdfstring{getRut()}{getRut()}}
+{\footnotesize\ttfamily \label{class_centro_medico_a38854249087f488c5a9b60f3cec13d8d} 
+String Centro\+Medico.\+get\+Rut (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Obtiene el rut del centro. \begin{DoxyReturn}{Returns}
+Rut del centro. 
+\end{DoxyReturn}
+\Hypertarget{class_centro_medico_aeb8e267ff6b4823b7cc9434a501eedee}\index{CentroMedico@{CentroMedico}!getSecretarias@{getSecretarias}}
+\index{getSecretarias@{getSecretarias}!CentroMedico@{CentroMedico}}
+\doxysubsubsection{\texorpdfstring{getSecretarias()}{getSecretarias()}}
+{\footnotesize\ttfamily \label{class_centro_medico_aeb8e267ff6b4823b7cc9434a501eedee} 
+Array\+List$<$ \mbox{\hyperlink{class_secretaria}{Secretaria}} $>$ Centro\+Medico.\+get\+Secretarias (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Obtiene la lista de secretarias. \begin{DoxyReturn}{Returns}
+Lista de secretarias. 
+\end{DoxyReturn}
+\Hypertarget{class_centro_medico_a41e1c975ac3ac8567eca35fa79ccd414}\index{CentroMedico@{CentroMedico}!modificarPaciente@{modificarPaciente}}
+\index{modificarPaciente@{modificarPaciente}!CentroMedico@{CentroMedico}}
+\doxysubsubsection{\texorpdfstring{modificarPaciente()}{modificarPaciente()}}
+{\footnotesize\ttfamily \label{class_centro_medico_a41e1c975ac3ac8567eca35fa79ccd414} 
+boolean Centro\+Medico.\+modificar\+Paciente (\begin{DoxyParamCaption}\item[{String}]{rut}{, }\item[{String}]{nueva\+Direccion}{, }\item[{String}]{nuevo\+Telefono}{, }\item[{\mbox{\hyperlink{enum_tipo_seguridad_social}{Tipo\+Seguridad\+Social}}}]{nueva\+Seguridad}{}\end{DoxyParamCaption})}
+
+Modifica los datos de un paciente. 
+\begin{DoxyParams}{Parameters}
+{\em rut} & Rut del paciente. \\
+\hline
+{\em nueva\+Direccion} & Dirección nueva. \\
+\hline
+{\em nuevo\+Telefono} & Teléfono nuevo. \\
+\hline
+{\em nueva\+Seguridad} & Tipo de seguridad social nueva. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si el paciente fue modificado, false si no fue encontrado. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Centro\+Medico.\+java\end{DoxyCompactItemize}

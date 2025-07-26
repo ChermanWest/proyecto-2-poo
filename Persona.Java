@@ -1,36 +1,67 @@
-public abstract class Persona{
-    protected String Rut;
-    protected String Nombre;
-    protected String Apellido;
-    protected Int Edad;
+/**
+ * Clase abstracta que representa una persona con datos básicos.
+ */
+public abstract class Persona {
+    protected String rut;
+    protected String nombre;
+    protected String apellido;
+    protected int edad;
 
-
-    public Persona(String Rut, String Nombre, String Apellido, Int Edad){
-        this.Rut = Rut;
-        this.Nombre = Nombre;
-        this.Apellido = Apellido;
-        this.Edad = Edad;
+    /**
+     * Construye una nueva instancia de Persona.
+     *
+     * @param rut      RUT o identificador único de la persona
+     * @param nombre   Nombre de la persona
+     * @param apellido Apellido de la persona
+     * @param edad     Edad de la persona en años
+     */
+    public Persona(String rut, String nombre, String apellido, int edad) {
+        this.rut = rut;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
     }
 
-    //GETTERS Y SETERS
+    /**
+     * Obtiene el tipo específico de persona.
+     *
+     * @return Cadena que describe el tipo de persona (p. ej., "Médico", "Paciente")
+     */
+    public abstract String getTipo();
 
-    public String getRut() {Return Rut;}
-    public void setRut(String Rut){this.Rut = Rut;}
+    /**
+     * Obtiene el nombre de la persona.
+     *
+     * @return Nombre de la persona
+     */
+    public String getNombre() {
+        return nombre;
+    }
 
-    public String getNombre() {Return Nombre;}
-    public void setNombre(String Nombre){this.Nombre = Nombre;}
+    /**
+     * Obtiene el apellido de la persona.
+     *
+     * @return Apellido de la persona
+     */
+    public String getApellido() {
+        return apellido;
+    }
 
-    public String getApellido() {Return Apellido;}
-    public void setApellido(String Apellido){this.Apellido = Apellido;}
-    
-    public int getEdad() {Return Edad;}
-    public void setEdad(String Edad){this.Edad = Edad;}
-        
-    public abstract getTipo();
-    public void mostrarInfo() {
-        System.out.println("Rut: " + Rut);
-        System.out.println("Nombre: " + Nombre);
-        System.out.println("Apellido: " + Apellido);
-        System.out.println("Edad: " + Edad);
+    /**
+     * Obtiene el RUT o identificador de la persona.
+     *
+     * @return RUT de la persona
+     */
+    public String getRut() {
+        return rut;
+    }
+
+    /**
+     * Obtiene la edad de la persona.
+     *
+     * @return Edad en años
+     */
+    public int getEdad() {
+        return edad;
     }
 }

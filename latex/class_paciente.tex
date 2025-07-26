@@ -1,0 +1,210 @@
+\doxysection{Paciente Class Reference}
+\hypertarget{class_paciente}{}\label{class_paciente}\index{Paciente@{Paciente}}
+Inheritance diagram for Paciente\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_paciente}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_paciente_a49a8f5899268072d090b2b61aaf1c87b}{Paciente}} (String rut, String nombre, String apellido, int edad, String direccion, String telefono, \mbox{\hyperlink{enum_tipo_seguridad_social}{Tipo\+Seguridad\+Social}} tipo\+Seguridad)
+\item 
+String \mbox{\hyperlink{class_paciente_a3156c8d742d49e29c004b29912ce5836}{get\+Direccion}} ()
+\item 
+String \mbox{\hyperlink{class_paciente_a39168bf0fcc177f54d810e9b2ecba8bf}{get\+Telefono}} ()
+\item 
+\mbox{\hyperlink{enum_tipo_seguridad_social}{Tipo\+Seguridad\+Social}} \mbox{\hyperlink{class_paciente_a76cb756230a9ae77da89220a9c4dcbf9}{get\+Tipo\+Seguridad}} ()
+\item 
+\mbox{\hyperlink{class_ficha_medica}{Ficha\+Medica}} \mbox{\hyperlink{class_paciente_ab72769153de1ddc26beaa15993e597d2}{get\+Ficha}} ()
+\item 
+void \mbox{\hyperlink{class_paciente_ae85c71c758a817e1fecffab7548f98bb}{set\+Direccion}} (String direccion)
+\item 
+void \mbox{\hyperlink{class_paciente_a565fc36bd43d67027340d36828fcd77d}{set\+Telefono}} (String telefono)
+\item 
+void \mbox{\hyperlink{class_paciente_a1ca9c4fabbb2f90822744742f3471ed2}{set\+Tipo\+Seguridad}} (\mbox{\hyperlink{enum_tipo_seguridad_social}{Tipo\+Seguridad\+Social}} tipo\+Seguridad)
+\item 
+void \mbox{\hyperlink{class_paciente_a8946da21d31bdaa7fb2209ec2322964e}{set\+Ficha}} (\mbox{\hyperlink{class_ficha_medica}{Ficha\+Medica}} ficha)
+\item 
+String \mbox{\hyperlink{class_paciente_a0a0d17a3bcddbc016c33b334920e6ddc}{get\+Tipo}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_persona}{Persona}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_persona_a6789ce918813413371e6d940aade6859}{Persona}} (String rut, String nombre, String apellido, int edad)
+\item 
+String \mbox{\hyperlink{class_persona_a9e52662168debc849af57ca92964f66b}{get\+Nombre}} ()
+\item 
+String \mbox{\hyperlink{class_persona_a62259c4387a52926aae1dd153d99e970}{get\+Apellido}} ()
+\item 
+String \mbox{\hyperlink{class_persona_a6be221b3cb72b33d68d3bb0ba1eb25b8}{get\+Rut}} ()
+\item 
+int \mbox{\hyperlink{class_persona_a97d1984e5715ef16d0ffafb02e57bbd1}{get\+Edad}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_persona}{Persona}}}
+\begin{DoxyCompactItemize}
+\item 
+String {\bfseries rut}
+\item 
+String {\bfseries nombre}
+\item 
+String {\bfseries apellido}
+\item 
+int {\bfseries edad}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa un paciente con datos de contacto y ficha médica. 
+
+\label{doc-constructors}
+\Hypertarget{class_paciente_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_paciente_a49a8f5899268072d090b2b61aaf1c87b}\index{Paciente@{Paciente}!Paciente@{Paciente}}
+\index{Paciente@{Paciente}!Paciente@{Paciente}}
+\doxysubsubsection{\texorpdfstring{Paciente()}{Paciente()}}
+{\footnotesize\ttfamily \label{class_paciente_a49a8f5899268072d090b2b61aaf1c87b} 
+Paciente.\+Paciente (\begin{DoxyParamCaption}\item[{String}]{rut}{, }\item[{String}]{nombre}{, }\item[{String}]{apellido}{, }\item[{int}]{edad}{, }\item[{String}]{direccion}{, }\item[{String}]{telefono}{, }\item[{\mbox{\hyperlink{enum_tipo_seguridad_social}{Tipo\+Seguridad\+Social}}}]{tipo\+Seguridad}{}\end{DoxyParamCaption})}
+
+Crea un nuevo paciente sin ficha médica inicial.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rut} & RUT del paciente \\
+\hline
+{\em nombre} & Nombre del paciente \\
+\hline
+{\em apellido} & Apellido del paciente \\
+\hline
+{\em edad} & Edad del paciente \\
+\hline
+{\em direccion} & Dirección del paciente \\
+\hline
+{\em telefono} & Teléfono de contacto \\
+\hline
+{\em tipo\+Seguridad} & Tipo de seguridad social del paciente \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_paciente_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_paciente_a3156c8d742d49e29c004b29912ce5836}\index{Paciente@{Paciente}!getDireccion@{getDireccion}}
+\index{getDireccion@{getDireccion}!Paciente@{Paciente}}
+\doxysubsubsection{\texorpdfstring{getDireccion()}{getDireccion()}}
+{\footnotesize\ttfamily \label{class_paciente_a3156c8d742d49e29c004b29912ce5836} 
+String Paciente.\+get\+Direccion (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Obtiene la dirección del paciente.
+
+\begin{DoxyReturn}{Returns}
+Dirección actual 
+\end{DoxyReturn}
+\Hypertarget{class_paciente_ab72769153de1ddc26beaa15993e597d2}\index{Paciente@{Paciente}!getFicha@{getFicha}}
+\index{getFicha@{getFicha}!Paciente@{Paciente}}
+\doxysubsubsection{\texorpdfstring{getFicha()}{getFicha()}}
+{\footnotesize\ttfamily \label{class_paciente_ab72769153de1ddc26beaa15993e597d2} 
+\mbox{\hyperlink{class_ficha_medica}{Ficha\+Medica}} Paciente.\+get\+Ficha (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Obtiene la ficha médica del paciente.
+
+\begin{DoxyReturn}{Returns}
+Ficha médica, o null si aún no está asignada 
+\end{DoxyReturn}
+\Hypertarget{class_paciente_a39168bf0fcc177f54d810e9b2ecba8bf}\index{Paciente@{Paciente}!getTelefono@{getTelefono}}
+\index{getTelefono@{getTelefono}!Paciente@{Paciente}}
+\doxysubsubsection{\texorpdfstring{getTelefono()}{getTelefono()}}
+{\footnotesize\ttfamily \label{class_paciente_a39168bf0fcc177f54d810e9b2ecba8bf} 
+String Paciente.\+get\+Telefono (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Obtiene el teléfono de contacto del paciente.
+
+\begin{DoxyReturn}{Returns}
+Teléfono actual 
+\end{DoxyReturn}
+\Hypertarget{class_paciente_a0a0d17a3bcddbc016c33b334920e6ddc}\index{Paciente@{Paciente}!getTipo@{getTipo}}
+\index{getTipo@{getTipo}!Paciente@{Paciente}}
+\doxysubsubsection{\texorpdfstring{getTipo()}{getTipo()}}
+{\footnotesize\ttfamily \label{class_paciente_a0a0d17a3bcddbc016c33b334920e6ddc} 
+String Paciente.\+get\+Tipo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Obtiene el tipo de persona.
+
+\begin{DoxyReturn}{Returns}
+Cadena literal "{}\+Paciente"{} 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_persona_a9d74ec9091a19c3d1e6f8a9b32b040f3}{Persona}}.
+
+\Hypertarget{class_paciente_a76cb756230a9ae77da89220a9c4dcbf9}\index{Paciente@{Paciente}!getTipoSeguridad@{getTipoSeguridad}}
+\index{getTipoSeguridad@{getTipoSeguridad}!Paciente@{Paciente}}
+\doxysubsubsection{\texorpdfstring{getTipoSeguridad()}{getTipoSeguridad()}}
+{\footnotesize\ttfamily \label{class_paciente_a76cb756230a9ae77da89220a9c4dcbf9} 
+\mbox{\hyperlink{enum_tipo_seguridad_social}{Tipo\+Seguridad\+Social}} Paciente.\+get\+Tipo\+Seguridad (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Obtiene el tipo de seguridad social del paciente.
+
+\begin{DoxyReturn}{Returns}
+Tipo de seguridad social 
+\end{DoxyReturn}
+\Hypertarget{class_paciente_ae85c71c758a817e1fecffab7548f98bb}\index{Paciente@{Paciente}!setDireccion@{setDireccion}}
+\index{setDireccion@{setDireccion}!Paciente@{Paciente}}
+\doxysubsubsection{\texorpdfstring{setDireccion()}{setDireccion()}}
+{\footnotesize\ttfamily \label{class_paciente_ae85c71c758a817e1fecffab7548f98bb} 
+void Paciente.\+set\+Direccion (\begin{DoxyParamCaption}\item[{String}]{direccion}{}\end{DoxyParamCaption})}
+
+Actualiza la dirección del paciente.
+
+
+\begin{DoxyParams}{Parameters}
+{\em direccion} & Nueva dirección \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_paciente_a8946da21d31bdaa7fb2209ec2322964e}\index{Paciente@{Paciente}!setFicha@{setFicha}}
+\index{setFicha@{setFicha}!Paciente@{Paciente}}
+\doxysubsubsection{\texorpdfstring{setFicha()}{setFicha()}}
+{\footnotesize\ttfamily \label{class_paciente_a8946da21d31bdaa7fb2209ec2322964e} 
+void Paciente.\+set\+Ficha (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ficha_medica}{Ficha\+Medica}}}]{ficha}{}\end{DoxyParamCaption})}
+
+Asigna o actualiza la ficha médica del paciente.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ficha} & Nueva ficha médica \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_paciente_a565fc36bd43d67027340d36828fcd77d}\index{Paciente@{Paciente}!setTelefono@{setTelefono}}
+\index{setTelefono@{setTelefono}!Paciente@{Paciente}}
+\doxysubsubsection{\texorpdfstring{setTelefono()}{setTelefono()}}
+{\footnotesize\ttfamily \label{class_paciente_a565fc36bd43d67027340d36828fcd77d} 
+void Paciente.\+set\+Telefono (\begin{DoxyParamCaption}\item[{String}]{telefono}{}\end{DoxyParamCaption})}
+
+Actualiza el teléfono del paciente.
+
+
+\begin{DoxyParams}{Parameters}
+{\em telefono} & Nuevo teléfono \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_paciente_a1ca9c4fabbb2f90822744742f3471ed2}\index{Paciente@{Paciente}!setTipoSeguridad@{setTipoSeguridad}}
+\index{setTipoSeguridad@{setTipoSeguridad}!Paciente@{Paciente}}
+\doxysubsubsection{\texorpdfstring{setTipoSeguridad()}{setTipoSeguridad()}}
+{\footnotesize\ttfamily \label{class_paciente_a1ca9c4fabbb2f90822744742f3471ed2} 
+void Paciente.\+set\+Tipo\+Seguridad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enum_tipo_seguridad_social}{Tipo\+Seguridad\+Social}}}]{tipo\+Seguridad}{}\end{DoxyParamCaption})}
+
+Actualiza el tipo de seguridad social del paciente.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tipo\+Seguridad} & Nuevo tipo de seguridad social \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Paciente.\+java\end{DoxyCompactItemize}
