@@ -17,7 +17,13 @@ public class Main {
         CentroMedico centro = new CentroMedico("Centro Vida", "76.123.456-7", "Salud Vida Ltda");
 
         int opcion;
-
+  /**
+     * Método principal que ejecuta el menú de gestión del Centro Médico.
+     * Permite agregar, modificar y listar pacientes, médicos y secretarias,
+     * además de registrar atenciones y cobros.
+     *
+     * @param args argumentos de línea de comandos (no utilizados)
+     */
         do {
             System.out.println("\n=== MENÚ CENTRO MÉDICO ===");
             System.out.println("1. Agregar paciente");
@@ -35,6 +41,13 @@ public class Main {
             // Esta es la opción para agregar pacientes
             switch (opcion) {
                 case 1:
+                                    /**
+                     * Agrega un nuevo paciente al centro médico.
+                     * Solicita los datos del paciente por consola y lo registra en el sistema.
+                     *
+                     * @param sc Scanner para la entrada de datos por consola.
+                     * @param centro Instancia del centro médico donde se agregará el paciente.
+                     */
                     System.out.println("RUT:");
                     String rut = sc.nextLine();
                     System.out.println("Nombre:");
@@ -201,6 +214,13 @@ case 6:
     break;
 
                 case 7:
+                 /**
+     * Menú de gestión de médicos.
+     * Permite agregar, modificar, eliminar y listar médicos del centro médico.
+     *
+     * @param sc Scanner para la entrada de datos por consola.
+     * @param centro Instancia del centro médico donde se gestionan los médicos.
+     */
                     int opcionMedico = 0;
                     do {
                         System.out.println("\n=== Gestión de Médicos ===");
