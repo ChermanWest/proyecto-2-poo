@@ -103,20 +103,26 @@ public class Main {
                     }
                     break;
                 
-                    
+                    /**
+ * Atiende a un paciente seleccionado y registra una notación médica.
+ *
+ * @param sc Scanner para la entrada de datos por consola.
+ * @param centro Instancia del centro médico donde se gestionan los pacientes y médicos.
+ */
+                
                     case 4:
-                    // Mostrar lista de pacientes numerada
-                    System.out.println("=== Seleccione un paciente para atender ===");
-                    int idx = 1;
-                    for (Paciente p : centro.getPacientes()) {
-                        System.out.println(idx + ". " + p.getNombre() + " " + p.getApellido() + " | RUT: " + p.getRut());
-                        idx++;
-                    }
-                    if (centro.getPacientes().isEmpty()) {
-                        System.out.println("No hay pacientes registrados.");
-                        break;
-                                    }
-                    System.out.print("Ingrese el número del paciente: ");
+    // Mostrar lista de pacientes numerada
+    System.out.println("=== Seleccione un paciente para atender ===");
+    int idx = 1;
+    for (Paciente p : centro.getPacientes()) {
+        System.out.println(idx + ". " + p.getNombre() + " " + p.getApellido() + " | RUT: " + p.getRut());
+        idx++;
+    }
+    if (centro.getPacientes().isEmpty()) {
+        System.out.println("No hay pacientes registrados.");
+        break;
+    }
+    System.out.print("Ingrese el número del paciente: ");
     int seleccion = sc.nextInt();
     sc.nextLine();
 
@@ -126,6 +132,27 @@ public class Main {
     }
 
     Paciente paciente = centro.getPacientes().get(seleccion - 1);
+
+    // Selección de médico
+    if (centro.getMedicos().isEmpty()) {
+        System.out.println(" No hay médicos registrados. Volviendo al menú principal...");
+        break;
+    }
+    System.out.println("=== Seleccione el médico que atenderá ===");
+    int idxMed = 1;
+    for (Medico m : centro.getMedicos()) {
+        System.out.println(idxMed + ". " + m.getNombre() + " " + m.getApellido() + " (" + m.getEspecialidad() + ")");
+        idxMed++;
+    }
+    System.out.print("Ingrese el número del médico: ");
+    int seleccionMed = sc.nextInt();
+    sc.nextLine();
+
+    if (seleccionMed < 1 || seleccionMed > centro.getMedicos().size()) {
+        System.out.println(" Selección inválida.");
+        break;
+    }
+    Medico medico = centro.getMedicos().get(seleccionMed - 1);
 
     // Crear ficha si no tiene
     if (paciente.getFicha() == null) {
@@ -161,7 +188,7 @@ public class Main {
     Notacion nueva = new Notacion(sintomas, diagnostico, indicaciones, proc);
     paciente.getFicha().agregarNotacion(nueva);
 
-    System.out.println(" Consulta registrada correctamente.");
+    System.out.println(" Consulta registrada correctamente. Atendido por Dr(a). " + medico.getNombre() + " " + medico.getApellido());
     break;
 
                 case 5:
@@ -234,30 +261,42 @@ case 6:
                         sc.nextLine();
 
                     switch (opcionMedico) {
-                        case 1:
-                            // AGREGAR MÉDICO
-                            System.out.println("Ingrese RUT:");
-                            String rutM = sc.nextLine();
-                            System.out.println("Ingrese nombre:");
-                            String nombreM = sc.nextLine();
-                            System.out.println("Ingrese apellido:");
-                            String apellidoM = sc.nextLine();
-                            System.out.println("Ingrese edad:");
-                            int edadM = sc.nextInt();
-                            sc.nextLine();
+                               // ...existing code...
+case 1:
+    // AGREGAR MÉDICO
+    System.out.println("Ingrese RUT:");
+    String rutM = sc.nextLine();
+    System.out.println("Ingrese nombre:");
+    String nombreM = sc.nextLine();
+    System.out.println("Ingrese apellido:");
+    String apellidoM = sc.nextLine();
+    System.out.println("Ingrese edad:");
+    int edadM = sc.nextInt();
+    sc.nextLine();
 
-                            System.out.println("Seleccione especialidad:");
-                            for (Especialidad e : Especialidad.values()) {
-                                System.out.println("- " + e);
-                            }
-                            String especStr = sc.nextLine().toUpperCase();
-                            Especialidad especialidad = Especialidad.valueOf(especStr);
+    System.out.println("Seleccione especialidad:");
+    int idxEsp = 1;
+    for (Especialidad e : Especialidad.values()) {
+        System.out.println(idxEsp + ". " + e);
+        idxEsp++;
+    }
+    System.out.print("Ingrese el número de la especialidad: ");
+    int opcionEsp = sc.nextInt();
+    sc.nextLine();
 
-                            Medico nuevoMedico = new Medico(rutM, nombreM, apellidoM, edadM, especialidad);
-                            centro.agregarMedico(nuevoMedico);
+    Especialidad especialidad;
+    if (opcionEsp >= 1 && opcionEsp <= Especialidad.values().length) {
+        especialidad = Especialidad.values()[opcionEsp - 1];
+    } else {
+        System.out.println("Especialidad inválida. Se asigna GENERAL por defecto.");
+        especialidad = Especialidad.GENERAL;
+    }
 
-                            System.out.println(" Médico agregado correctamente.");
-                            break;
+    Medico nuevoMedico = new Medico(rutM, nombreM, apellidoM, edadM, especialidad);
+    centro.agregarMedico(nuevoMedico);
+
+    System.out.println(" Médico agregado correctamente.");
+    break;
 
                         case 2:
                             // MODIFICAR MÉDICO
@@ -414,7 +453,7 @@ case 6:
                 break;
 
             case 5:
-                System.out.println("↩ Volviendo al menú principal...");
+                System.out.println(" Volviendo al menú principal...");
                 break;
 
             default:
