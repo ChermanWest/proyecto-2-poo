@@ -33,6 +33,40 @@ Clase principal que ejecuta el menú de gestión del Centro Médico. Permite agr
 {\footnotesize\ttfamily \label{class_main_a8a5d0f827edddff706cc0e6740d0579a} 
 void Main.\+main (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+Método principal que ejecuta el menú de gestión del Centro Médico. Permite agregar, modificar y listar pacientes, médicos y secretarias, además de registrar atenciones y cobros.
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & argumentos de línea de comandos (no utilizados)\\
+\hline
+\end{DoxyParams}
+Agrega un nuevo paciente al centro médico. Solicita los datos del paciente por consola y lo registra en el sistema.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sc} & Scanner para la entrada de datos por consola. \\
+\hline
+{\em centro} & Instancia del centro médico donde se agregará el paciente.\\
+\hline
+\end{DoxyParams}
+Atiende a un paciente seleccionado y registra una notación médica.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sc} & Scanner para la entrada de datos por consola. \\
+\hline
+{\em centro} & Instancia del centro médico donde se gestionan los pacientes y médicos.\\
+\hline
+\end{DoxyParams}
+Menú de gestión de médicos. Permite agregar, modificar, eliminar y listar médicos del centro médico.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sc} & Scanner para la entrada de datos por consola. \\
+\hline
+{\em centro} & Instancia del centro médico donde se gestionan los médicos.\\
+\hline
+\end{DoxyParams}
 Menú de gestión de secretarias. Permite agregar, modificar, eliminar y listar secretarias del centro médico.
 
 

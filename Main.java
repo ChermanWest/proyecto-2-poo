@@ -3,8 +3,8 @@ import java.util.Scanner;
  * Clase principal que ejecuta el menú de gestión del Centro Médico.
  * Permite agregar, modificar y listar pacientes, médicos y secretarias,
  * además de registrar atenciones y cobros.
- * * @version 1.0
- * @since 2024-07-25
+ * @version 1.0
+ * @since 2025-07-25
  * @author  
  *   German Castro  
  *   Bastian Aumada
@@ -15,9 +15,9 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         CentroMedico centro = new CentroMedico("Centro Vida", "76.123.456-7", "Salud Vida Ltda");
-
+        
         int opcion;
-  /**
+    /**
      * Método principal que ejecuta el menú de gestión del Centro Médico.
      * Permite agregar, modificar y listar pacientes, médicos y secretarias,
      * además de registrar atenciones y cobros.
@@ -241,7 +241,7 @@ case 6:
     break;
 
                 case 7:
-                 /**
+                    /**
      * Menú de gestión de médicos.
      * Permite agregar, modificar, eliminar y listar médicos del centro médico.
      *
@@ -261,7 +261,7 @@ case 6:
                         sc.nextLine();
 
                     switch (opcionMedico) {
-                               // ...existing code...
+                            
 case 1:
     // AGREGAR MÉDICO
     System.out.println("Ingrese RUT:");
